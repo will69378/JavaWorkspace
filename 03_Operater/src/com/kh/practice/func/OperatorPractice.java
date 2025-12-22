@@ -41,7 +41,8 @@ public class OperatorPractice {
 		System.out.print("성적 : ");
 		double test = sc.nextDouble();
 
-		System.out.println(grade + "학년 " + cnum + "반 " + num + "번 " + name + " "
+		System.out.println(grade + "학년 " + cnum + "반 " 
+		+ num + "번 " + name + " "
 		+ result + "의 " + "성적은 " + test + "입니다");
 	}
 
@@ -74,7 +75,9 @@ public class OperatorPractice {
 		double sum = kr + eg + ma;
 		double avg = sum / c;
 
-		String result = ((kr >= 40) && (eg >= 40) && (ma >= 40)) && (avg >= 60) ? "합격" : "불합격";
+		String result = ((kr >= 40) && (eg >= 40)
+				&& (ma >= 40)) && (avg >= 60) 
+				? "합격" : "불합격";
 
 		System.out.println("합계 : " + sum);
 		System.out.println("평균 : " + avg);
@@ -87,7 +90,8 @@ public class OperatorPractice {
 		System.out.print("주민번호를 입력하세요 (-포함)");
 		String num = sc.next();
 
-		String result = (num.charAt(7) == '2') || (num.charAt(7) == '4') ? "여자" : "남자";
+		String result = (num.charAt(7) == '2') 
+				|| (num.charAt(7) == '4') ? "여자" : "남자";
 		System.out.println(result);
 
 	}
@@ -103,7 +107,8 @@ public class OperatorPractice {
 		System.out.print("입력 : ");
 		int num3 = sc.nextInt();
 
-		boolean result = ((num1 < num2) && ((num3 <= num1) || (num3 > num2))) ? true : false;
+		boolean result = ((num1 < num2) && ((num3 <= num1)
+				|| (num3 > num2))) ? true : false;
 		System.out.println(result);
 	}
 	
@@ -118,7 +123,8 @@ public class OperatorPractice {
 		System.out.print("입력 3 : ");
 		int num3 = sc.nextInt();
 		
-		boolean result = ((num1 == num2) && (num2 == num3) && (num3 == num1)) ? true : false;
+		boolean result = ((num1 == num2) && (num2 == num3)
+				&& (num3 == num1)) ? true : false;
 		System.out.println(result);
 	}
 	
@@ -137,17 +143,23 @@ public class OperatorPractice {
 		double all2 = ym2;
 		double all3 = ym3 + (ym3 * 15) / 100;
 		
-		String result1 = all1>=3000 ? "3000 이상" : "3000 미만";
-		String result2 = all2>=3000 ? "3000 이상" : "3000 미만";
-		String result3 = all3>=3000 ? "3000 이상" : "3000 미만";
+		String result1 = all1>=3000 ? "3000 이상"
+				: "3000 미만";
+		String result2 = all2>=3000 ? "3000 이상"
+				: "3000 미만";
+		String result3 = all3>=3000 ? "3000 이상"
+				: "3000 미만";
 		
-		System.out.println("A사원의 연봉/연봉+a : " + ym1+"/"+all1);
+		System.out.println("A사원의 연봉/연봉+a : " 
+		+ ym1+"/"+all1);
 		System.out.println(result1);
 		
-		System.out.println("B사원의 연봉/연봉+a : " + ym2+"/"+all2);
+		System.out.println("B사원의 연봉/연봉+a : " 
+		+ ym2+"/"+all2);
 		System.out.println(result2);
 		
-		System.out.println("C사원의 연봉/연봉+a : " + ym3+"/"+all3);
+		System.out.println("C사원의 연봉/연봉+a : " 
+		+ ym3+"/"+all3);
 		System.out.println(result3);
 	}
 }
