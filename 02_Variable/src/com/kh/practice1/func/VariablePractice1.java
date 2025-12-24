@@ -7,19 +7,19 @@ public class VariablePractice1 {
 	public void practice1() {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("ÀÌ¸§ : ");
+		System.out.print("ì´ë¦„ : ");
 		String name = sc.next();
 		
-		System.out.print("¼ºº°(³²/¿©) : ");
+		System.out.print("ì„±ë³„(ë‚¨/ì—¬) : ");
 		char gender = sc.next().charAt(0);
 
-		System.out.print("³ªÀÌ : ");
+		System.out.print("ë‚˜ì´ : ");
 		int age = sc.nextInt();
 		
-		System.out.print("Å° : ");
+		System.out.print("í‚¤ : ");
 		double height = sc.nextDouble();
 		
-		System.out.print("Å° "+ height + "ÀÎ " + age + "»ì " + gender + "ÀÚ " + name + "´Ô ¹İ°©½À´Ï´Ù ^^");
+		System.out.print("í‚¤ "+ height + "ì¸ " + age + "ì‚´ " + gender + "ì " + name + "ë‹˜ ë°˜ê°‘ìŠµë‹ˆë‹¤ ^^");
 	}
 	
 }

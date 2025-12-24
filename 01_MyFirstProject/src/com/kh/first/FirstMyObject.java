@@ -1,15 +1,15 @@
 package com.kh.first;
-//package + class ¸í == Ç®Å¬·¡½º¸í
+//package + class ëª… == í’€í´ë˜ìŠ¤ëª…
 
 import java.util.Date;
 
 public class FirstMyObject {
 	
 	
-	//ÀÚ¹Ù¸¦ ½ÇÇàÇÏ±â À§ÇØ ¹İµå½Ã main ¸Ş¼­µå Á¸ÀçÇØ¾ßÇÔ.
+	//ìë°”ë¥¼ ì‹¤í–‰í•˜ê¸° ìœ„í•´ ë°˜ë“œì‹œ main ë©”ì„œë“œ ì¡´ì¬í•´ì•¼í•¨.
 	public static void main(String[] args) {
 		
-		System.out.println("¾È³ç ¤¾¤¾");
+		System.out.println("ì•ˆë…• ã…ã…");
 		
 		System.out.println(new Date());
 		

@@ -10,21 +10,21 @@ public class CastingPractice {
 		int count = 0;
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("±¹¾î : ");
+		System.out.print("êµ­ì–´ : ");
 		double kr = sc.nextDouble();
 		count = count + 1;
 		
-		System.out.print("¿µ¾î : ");
+		System.out.print("ì˜ì–´ : ");
 		double eg = sc.nextDouble();
 		count = count + 1;
 		
-		System.out.print("¼öÇĞ : ");
+		System.out.print("ìˆ˜í•™ : ");
 		double ma = sc.nextDouble();
 		count = count + 1;
 		
 		int sum = (int)(kr + eg + ma);
-		System.out.println("ÃÑÁ¡ : " + sum);
-		System.out.println("Æò±Õ : " + sum/count);
+		System.out.println("ì´ì  : " + sum);
+		System.out.println("í‰ê·  : " + sum/count);
 	}
 	
 }	

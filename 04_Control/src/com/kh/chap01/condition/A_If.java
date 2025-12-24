@@ -4,66 +4,66 @@ import java.util.Scanner;
 
 public class A_If {
 	/*
-	 * Á¶°Ç¹® - Á¶°Ç½ÄÀ» ÅëÇØ Âü / °ÅÁşÀ» ÆÇ´ÜÇÏ¿© ±×¿¡ ÇØ´çÇÏ´Â ÄÚµå¸¦ ½ÇÇà. - Á¶°Ç½ÄÀº º¸Åë ºñ±³¿¬»êÀÚ, ³í¸®¿¬»êÀÚ¸¦ »ç¿ëÇÏ¿© ÀÛ¼ºÇÑ´Ù.
-	 * - Á¶°Ç¹®Àº if / switch ¹®À¸·Î ³ª´µ¾î¼­ »ç¿ëÇÔ.
+	 * ì¡°ê±´ë¬¸ - ì¡°ê±´ì‹ì„ í†µí•´ ì°¸ / ê±°ì§“ì„ íŒë‹¨í•˜ì—¬ ê·¸ì— í•´ë‹¹í•˜ëŠ” ì½”ë“œë¥¼ ì‹¤í–‰. - ì¡°ê±´ì‹ì€ ë³´í†µ ë¹„êµì—°ì‚°ì, ë…¼ë¦¬ì—°ì‚°ìë¥¼ ì‚¬ìš©í•˜ì—¬ ì‘ì„±í•œë‹¤.
+	 * - ì¡°ê±´ë¬¸ì€ if / switch ë¬¸ìœ¼ë¡œ ë‚˜ë‰˜ì–´ì„œ ì‚¬ìš©í•¨.
 	 */
 
 	Scanner sc = new Scanner(System.in);
 
 	public void method() {
 		/*
-		 * ´Üµ¶ if¹®
+		 * ë‹¨ë… ifë¬¸
 		 * 
-		 * [Ç¥Çö¹ı] if(Á¶°Ç½Ä) { Á¶°Ç½ÄÀÌ trueÀÎ °æ¿ì ½ÇÇàÇÒ ÄÚµå }
+		 * [í‘œí˜„ë²•] if(ì¡°ê±´ì‹) { ì¡°ê±´ì‹ì´ trueì¸ ê²½ìš° ì‹¤í–‰í•  ì½”ë“œ }
 		 */
 
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		int num = sc.nextInt();
 
 		if (num > 0) {
-			System.out.println("¾ç¼ö");
+			System.out.println("ì–‘ìˆ˜");
 		}
 
 		if (num <= 0) {
-			System.out.println("¾ç¼ö°¡ ¾Æ´Ï´Ù");
+			System.out.println("ì–‘ìˆ˜ê°€ ì•„ë‹ˆë‹¤");
 		}
 	}
 
 	public void method2() {
 		/*
-		 * if ~ else ¹® if(Á¶°Ç½Ä) { //Á¶°Ç½ÄÀÌ trueÀÎ °æ¿ì ½ÇÇàÇÒ ÄÚµå } else { //Á¶°Ç½ÄÀÌ falseÀÎ °æ¿ì ½ÇÇàÇÒ ÄÚµå
+		 * if ~ else ë¬¸ if(ì¡°ê±´ì‹) { //ì¡°ê±´ì‹ì´ trueì¸ ê²½ìš° ì‹¤í–‰í•  ì½”ë“œ } else { //ì¡°ê±´ì‹ì´ falseì¸ ê²½ìš° ì‹¤í–‰í•  ì½”ë“œ
 		 * }
 		 */
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		int num = sc.nextInt();
 
 		if (num > 0) {
-			System.out.println("¾ç¼ö´Ù");
+			System.out.println("ì–‘ìˆ˜ë‹¤");
 		} else {
-			System.out.println("¾ç¼ö°¡ ¾Æ´Ï´Ù");
+			System.out.println("ì–‘ìˆ˜ê°€ ì•„ë‹ˆë‹¤");
 
 		}
 	}
 
 	public void method3() {
 		/*
-		 * if - else if ¹® °°Àº ºñ±³ ´ë»óÀ¸·Î "¿©·¯°³ÀÇ Á¶°Ç"À» Á¦½ÃÇØ¾ß ÇÏ´Â °æ¿ì »ç¿ë if(Á¶°Ç½Ä1) { Á¶°Ç½Ä1ÀÌ ÂüÀÎ °æ¿ì }
-		 * else if(Á¶°Ç½Ä2) { Á¶°Ç½Ä2ÀÌ ÂüÀÎ °æ¿ì } else if(Á¶°Ç½Ä3) { Á¶°Ç½Ä3ÀÌ ÂüÀÎ °æ¿ì } else { À§ÀÇ Á¶°ÇµéÀÌ ¸ğµÎ
-		 * falseÀÎ °æ¿ì ½ÇÇà }
+		 * if - else if ë¬¸ ê°™ì€ ë¹„êµ ëŒ€ìƒìœ¼ë¡œ "ì—¬ëŸ¬ê°œì˜ ì¡°ê±´"ì„ ì œì‹œí•´ì•¼ í•˜ëŠ” ê²½ìš° ì‚¬ìš© if(ì¡°ê±´ì‹1) { ì¡°ê±´ì‹1ì´ ì°¸ì¸ ê²½ìš° }
+		 * else if(ì¡°ê±´ì‹2) { ì¡°ê±´ì‹2ì´ ì°¸ì¸ ê²½ìš° } else if(ì¡°ê±´ì‹3) { ì¡°ê±´ì‹3ì´ ì°¸ì¸ ê²½ìš° } else { ìœ„ì˜ ì¡°ê±´ë“¤ì´ ëª¨ë‘
+		 * falseì¸ ê²½ìš° ì‹¤í–‰ }
 		 */
-		System.out.print("Á¤¼ö : ");
+		System.out.print("ì •ìˆ˜ : ");
 		int num = sc.nextInt();
 
 		if (num > 0) {
-			System.out.println("¾ç¼ö");
+			System.out.println("ì–‘ìˆ˜");
 		} else if (num == 0) {
 			System.out.println("0");
 		} else {
-			System.out.println("À½¼ö");
+			System.out.println("ìŒìˆ˜");
 		}
-		// Á¶°Ç½ÄÀ» ¸¸Á·ÇÏ´Â ¼ø°£ ¾Æ·¡ ÄÚµåµéÀº ½ÇÇàÇÏÁö ¾Ê°í Áï½Ã ºüÁ®³ª°¨
+		// ì¡°ê±´ì‹ì„ ë§Œì¡±í•˜ëŠ” ìˆœê°„ ì•„ë˜ ì½”ë“œë“¤ì€ ì‹¤í–‰í•˜ì§€ ì•Šê³  ì¦‰ì‹œ ë¹ ì ¸ë‚˜ê°
 
-		// if - else if ¾ø´Â ¹öÀü
+		// if - else if ì—†ëŠ” ë²„ì „
 		/*
 		 * if (num > 0) { System.out.println(); } else { if (num < 0 ) {
 		 * 
@@ -73,83 +73,83 @@ public class A_If {
 	}
 
 	public void method4() {
-		// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ³ªÀÌ¸¦ °¡Áö°í ¾î¸°ÀÌ/Ã»¼Ò³â/¼ºÀÎ/¾î¸£½Å ÀÎÁö Ãâ·Â
-		// 13¼¼ÀÌÇÏ : ¾î¸°ÀÌ , 13¼¼ ÃÊ°ú 19¼¼ ÀÌÇÏ : Ã»¼Ò³â, 19¼¼ ÃÊ°ú 60 ÀÌÇÏ : ¼ºÀÎ, 60 ÃÊ°ú :¾î¸£½Å
+		// ì‚¬ìš©ìê°€ ì…ë ¥í•œ ë‚˜ì´ë¥¼ ê°€ì§€ê³  ì–´ë¦°ì´/ì²­ì†Œë…„/ì„±ì¸/ì–´ë¥´ì‹  ì¸ì§€ ì¶œë ¥
+		// 13ì„¸ì´í•˜ : ì–´ë¦°ì´ , 13ì„¸ ì´ˆê³¼ 19ì„¸ ì´í•˜ : ì²­ì†Œë…„, 19ì„¸ ì´ˆê³¼ 60 ì´í•˜ : ì„±ì¸, 60 ì´ˆê³¼ :ì–´ë¥´ì‹ 
 
-		System.out.print("³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		int num = sc.nextInt();
 
 		if (num <= 13) {
-			System.out.println("¾î¸°ÀÌ");
+			System.out.println("ì–´ë¦°ì´");
 		} 
 		else if (num > 13 && num <= 19) {
-			System.out.println("Ã»¼Ò³â");
+			System.out.println("ì²­ì†Œë…„");
 		} 
 		else if (num > 19 && num <= 60) {
-			System.out.println("¼ºÀÎ");
+			System.out.println("ì„±ì¸");
 		} 
 		else if (num > 60) {
-			System.out.println("³ëÀÎ");
+			System.out.println("ë…¸ì¸");
 		} 
 		else {
-			System.out.println("´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä");
+			System.out.println("ë‹¤ì‹œ ì…ë ¥í•˜ì„¸ìš”");
 		}
 	}
 	
 	public void method5() {
-		//¼ºº°°ú ÀÌ¸§À» ÀÔ·Â¹Ş¾Æ, ÀÌ¸§°ú ¼ºº°À» Ãâ·Â
-		//¼ºº°Àº m/f·Î ÀÔ·Â¹Ş°í Ãâ·Â½Ã¿¡´Â ³²ÀÚ, ¿©ÀÚ·Î Ãâ·Â
+		//ì„±ë³„ê³¼ ì´ë¦„ì„ ì…ë ¥ë°›ì•„, ì´ë¦„ê³¼ ì„±ë³„ì„ ì¶œë ¥
+		//ì„±ë³„ì€ m/fë¡œ ì…ë ¥ë°›ê³  ì¶œë ¥ì‹œì—ëŠ” ë‚¨ì, ì—¬ìë¡œ ì¶œë ¥
 		
-		System.out.print("ÀÌ¸§ : ");
+		System.out.print("ì´ë¦„ : ");
 		String name = sc.next();
 		
-		System.out.println("¼ºº°(M/F) : ");
+		System.out.println("ì„±ë³„(M/F) : ");
 		char ch = sc.next().charAt(0);
 		
 		String result;
 		if(ch == 'm' || ch == 'M') {
-			result = "³²ÀÚ";
+			result = "ë‚¨ì";
 		}
 		else if(ch == 'f' || ch == 'F') {
-			result = "¿©ÀÚ";
+			result = "ì—¬ì";
 		}
 		else {
 			result = "";
-			System.out.println("´Ù½Ã ÀÔ·Â");
+			System.out.println("ë‹¤ì‹œ ì…ë ¥");
 		}
 		
-		System.out.println(name + "´ÔÀº " + result +"ÀÔ´Ï´Ù");
+		System.out.println(name + "ë‹˜ì€ " + result +"ì…ë‹ˆë‹¤");
 	}
 
 	public void method6() {
-		//»ç¿ëÀÚ¿¡°Ô ÀÌ¸§À» ÀÔ·Â¹Ş¾Æ º»ÀÎ ÀÌ¸§°ú ÀÏÄ¡ÇÏ´ÂÁö ºñ±³ÇÏ±â
+		//ì‚¬ìš©ìì—ê²Œ ì´ë¦„ì„ ì…ë ¥ë°›ì•„ ë³¸ì¸ ì´ë¦„ê³¼ ì¼ì¹˜í•˜ëŠ”ì§€ ë¹„êµí•˜ê¸°
 		
-		System.out.print("ÀÌ¸§ : ");
+		System.out.print("ì´ë¦„ : ");
 		String name = sc.next();
 		
-		String myname = "±èÁö¿ø";
+		String myname = "ê¹€ì§€ì›";
 		
-		//ÁÖ¼Ò°ªÀÌ ´Ş¶ó¼­ ³»¿ë¹°ÀÌ °°¾Æµµ ´Ù¸£´Ù°í ÀÎ½ÄÇÔ
+		//ì£¼ì†Œê°’ì´ ë‹¬ë¼ì„œ ë‚´ìš©ë¬¼ì´ ê°™ì•„ë„ ë‹¤ë¥´ë‹¤ê³  ì¸ì‹í•¨
 		/*if(name == myname) {
-			System.out.println("ÀÏÄ¡");
+			System.out.println("ì¼ì¹˜");
 		}
 		else {
-			System.out.println("ºÒÀÏÄ¡");
+			System.out.println("ë¶ˆì¼ì¹˜");
 		} */
 		
 		/*
-		(Áß¿ä) ! ±âº»ÀÚ·áÇü°ú ºñ±³½Ã ==, != »ç¿ë°¡´ÉÇÔ
+		(ì¤‘ìš”) ! ê¸°ë³¸ìë£Œí˜•ê³¼ ë¹„êµì‹œ ==, != ì‚¬ìš©ê°€ëŠ¥í•¨
 		
-		´Ü ÂüÁ¶ÀÚ·áÇü(String) Àº µ¿µî ºñ±³½Ã Á¤»óÀûÀÎ ºñ±³ ¾ÈµÊ
-		ÂüÁ¶ÀÚ·áÇüÀº ¼­·Î °ªÀÌ µ¿ÀÏÇÑÁö ºñ±³ÇÒ ¶§ .equals()¸¦ »ç¿ë
+		ë‹¨ ì°¸ì¡°ìë£Œí˜•(String) ì€ ë™ë“± ë¹„êµì‹œ ì •ìƒì ì¸ ë¹„êµ ì•ˆë¨
+		ì°¸ì¡°ìë£Œí˜•ì€ ì„œë¡œ ê°’ì´ ë™ì¼í•œì§€ ë¹„êµí•  ë•Œ .equals()ë¥¼ ì‚¬ìš©
 		
 		*/
 		
 		if(name.equals(myname)) {
-			System.out.println("ÀÏÄ¡");
+			System.out.println("ì¼ì¹˜");
 		}
 		else {
-			System.out.println("ºÒÀÏÄ¡");
+			System.out.println("ë¶ˆì¼ì¹˜");
 		}
 	}
 	

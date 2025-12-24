@@ -7,10 +7,10 @@ public class VariablePractice2 {
 	public void practice2() {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Ã¹¹øÂ° Á¤¼ö : ");
+		System.out.print("ì²«ë²ˆì§¸ ì •ìˆ˜ : ");
 		int first = sc.nextInt();
 		
-		System.out.print("µÎ¹øÂ° Á¤¼ö : ");
+		System.out.print("ë‘ë²ˆì§¸ ì •ìˆ˜ : ");
 		int second = sc.nextInt();
 		
 		int sum = first + second;
@@ -18,10 +18,10 @@ public class VariablePractice2 {
 		int xnum = first*second;
 		int mnum = first/second;
 		
-		System.out.println("´õÇÏ±â °á°ú : " + sum);
-		System.out.println("»©±â °á°ú : " + min);
-		System.out.println("°öÇÏ±â °á°ú : " + xnum);
-		System.out.println("³ª´©±â °á°ú : " + mnum);
+		System.out.println("ë”í•˜ê¸° ê²°ê³¼ : " + sum);
+		System.out.println("ë¹¼ê¸° ê²°ê³¼ : " + min);
+		System.out.println("ê³±í•˜ê¸° ê²°ê³¼ : " + xnum);
+		System.out.println("ë‚˜ëˆ„ê¸° ê²°ê³¼ : " + mnum);
 	}
 	
 }

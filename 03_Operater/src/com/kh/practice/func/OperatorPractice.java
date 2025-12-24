@@ -7,51 +7,51 @@ public class OperatorPractice {
 	Scanner sc = new Scanner(System.in);
 
 	public void practice1() {
-		System.out.print("ÀÎ¿ø ¼ö : ");
+		System.out.print("ì¸ì› ìˆ˜ : ");
 		int num = sc.nextInt();
 
-		System.out.print("»çÅÁ °³¼ö : ");
+		System.out.print("ì‚¬íƒ• ê°œìˆ˜ : ");
 		int candy = sc.nextInt();
 
 		int p = candy / num;
 		int np = candy % num;
 
-		System.out.println("1ÀÎ´ç »çÅÁ °³¼ö : " + p);
-		System.out.println("³²´Â »çÅÁ °³¼ö : " + np);
+		System.out.println("1ì¸ë‹¹ ì‚¬íƒ• ê°œìˆ˜ : " + p);
+		System.out.println("ë‚¨ëŠ” ì‚¬íƒ• ê°œìˆ˜ : " + np);
 	}
 
 	public void practice2() {
 
-		System.out.print("ÀÌ¸§ : ");
+		System.out.print("ì´ë¦„ : ");
 		String name = sc.next();
 
-		System.out.print("ÇĞ³â : ");
+		System.out.print("í•™ë…„ : ");
 		int grade = sc.nextInt();
 
-		System.out.print("¹İ : ");
+		System.out.print("ë°˜ : ");
 		int cnum = sc.nextInt();
 
-		System.out.print("¹øÈ£ : ");
+		System.out.print("ë²ˆí˜¸ : ");
 		int num = sc.nextInt();
 
-		System.out.print("¼ºº°(M/F) : ");
+		System.out.print("ì„±ë³„(M/F) : ");
 		char gender = sc.next().charAt(0);
-		String result = (gender == 'M') ? "³²ÇĞ»ı" : "¿©ÇĞ»ı";
+		String result = (gender == 'M') ? "ë‚¨í•™ìƒ" : "ì—¬í•™ìƒ";
 
-		System.out.print("¼ºÀû : ");
+		System.out.print("ì„±ì  : ");
 		double test = sc.nextDouble();
 
-		System.out.println(grade + "ÇĞ³â " + cnum + "¹İ " 
-		+ num + "¹ø " + name + " "
-		+ result + "ÀÇ " + "¼ºÀûÀº " + test + "ÀÔ´Ï´Ù");
+		System.out.println(grade + "í•™ë…„ " + cnum + "ë°˜ " 
+		+ num + "ë²ˆ " + name + " "
+		+ result + "ì˜ " + "ì„±ì ì€ " + test + "ì…ë‹ˆë‹¤");
 	}
 
 	public void practice3() {
 
-		System.out.print("³ªÀÌ : ");
+		System.out.print("ë‚˜ì´ : ");
 		int age = sc.nextInt();
-		String result = (age <= 13) ? "¾î¸°ÀÌ" : 
-			(age > 13 && age <= 19) ? "Ã»¼Ò³â" : "¼ºÀÎ";
+		String result = (age <= 13) ? "ì–´ë¦°ì´" : 
+			(age > 13 && age <= 19) ? "ì²­ì†Œë…„" : "ì„±ì¸";
 		System.out.println(result);
 
 	}
@@ -60,15 +60,15 @@ public class OperatorPractice {
 
 		int c = 0;
 
-		System.out.print("±¹¾î : ");
+		System.out.print("êµ­ì–´ : ");
 		int kr = sc.nextInt();
 		c += 1;
 
-		System.out.print("¿µ¾î : ");
+		System.out.print("ì˜ì–´ : ");
 		int eg = sc.nextInt();
 		c += 1;
 
-		System.out.print("¼öÇĞ : ");
+		System.out.print("ìˆ˜í•™ : ");
 		int ma = sc.nextInt();
 		c += 1;
 
@@ -77,34 +77,34 @@ public class OperatorPractice {
 
 		String result = ((kr >= 40) && (eg >= 40)
 				&& (ma >= 40)) && (avg >= 60) 
-				? "ÇÕ°İ" : "ºÒÇÕ°İ";
+				? "í•©ê²©" : "ë¶ˆí•©ê²©";
 
-		System.out.println("ÇÕ°è : " + sum);
-		System.out.println("Æò±Õ : " + avg);
+		System.out.println("í•©ê³„ : " + sum);
+		System.out.println("í‰ê·  : " + avg);
 		System.out.println(result);
 
 	}
 
 	public void practice5() {
 
-		System.out.print("ÁÖ¹Î¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä (-Æ÷ÇÔ)");
+		System.out.print("ì£¼ë¯¼ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” (-í¬í•¨)");
 		String num = sc.next();
 
 		String result = (num.charAt(7) == '2') 
-				|| (num.charAt(7) == '4') ? "¿©ÀÚ" : "³²ÀÚ";
+				|| (num.charAt(7) == '4') ? "ì—¬ì" : "ë‚¨ì";
 		System.out.println(result);
 
 	}
 
 	public void practice6() {
 
-		System.out.print("Á¤¼ö1 : ");
+		System.out.print("ì •ìˆ˜1 : ");
 		int num1 = sc.nextInt();
 
-		System.out.print("Á¤¼ö2 : ");
+		System.out.print("ì •ìˆ˜2 : ");
 		int num2 = sc.nextInt();
 
-		System.out.print("ÀÔ·Â : ");
+		System.out.print("ì…ë ¥ : ");
 		int num3 = sc.nextInt();
 
 		boolean result = ((num1 < num2) && ((num3 <= num1)
@@ -114,13 +114,13 @@ public class OperatorPractice {
 	
 	public void practice7(){
 		
-		System.out.print("ÀÔ·Â 1 : ");
+		System.out.print("ì…ë ¥ 1 : ");
 		int num1 = sc.nextInt();
 		
-		System.out.print("ÀÔ·Â 2 : ");
+		System.out.print("ì…ë ¥ 2 : ");
 		int num2 = sc.nextInt();
 		
-		System.out.print("ÀÔ·Â 3 : ");
+		System.out.print("ì…ë ¥ 3 : ");
 		int num3 = sc.nextInt();
 		
 		boolean result = ((num1 == num2) && (num2 == num3)
@@ -130,35 +130,35 @@ public class OperatorPractice {
 	
 	public void practice8(){
 		
-		System.out.print("A»ç¿øÀÇ ¿¬ºÀ : ");
+		System.out.print("Aì‚¬ì›ì˜ ì—°ë´‰ : ");
 		int ym1 = sc.nextInt();
 		
-		System.out.print("B»ç¿øÀÇ ¿¬ºÀ : ");
+		System.out.print("Bì‚¬ì›ì˜ ì—°ë´‰ : ");
 		int ym2 = sc.nextInt();
 		
-		System.out.print("C»ç¿øÀÇ ¿¬ºÀ : ");
+		System.out.print("Cì‚¬ì›ì˜ ì—°ë´‰ : ");
 		int ym3 = sc.nextInt();
 		
 		double all1 = ym1 + (ym1 * 40) / 100;
 		double all2 = ym2;
 		double all3 = ym3 + (ym3 * 15) / 100;
 		
-		String result1 = all1>=3000 ? "3000 ÀÌ»ó"
-				: "3000 ¹Ì¸¸";
-		String result2 = all2>=3000 ? "3000 ÀÌ»ó"
-				: "3000 ¹Ì¸¸";
-		String result3 = all3>=3000 ? "3000 ÀÌ»ó"
-				: "3000 ¹Ì¸¸";
+		String result1 = all1>=3000 ? "3000 ì´ìƒ"
+				: "3000 ë¯¸ë§Œ";
+		String result2 = all2>=3000 ? "3000 ì´ìƒ"
+				: "3000 ë¯¸ë§Œ";
+		String result3 = all3>=3000 ? "3000 ì´ìƒ"
+				: "3000 ë¯¸ë§Œ";
 		
-		System.out.println("A»ç¿øÀÇ ¿¬ºÀ/¿¬ºÀ+a : " 
+		System.out.println("Aì‚¬ì›ì˜ ì—°ë´‰/ì—°ë´‰+a : " 
 		+ ym1+"/"+all1);
 		System.out.println(result1);
 		
-		System.out.println("B»ç¿øÀÇ ¿¬ºÀ/¿¬ºÀ+a : " 
+		System.out.println("Bì‚¬ì›ì˜ ì—°ë´‰/ì—°ë´‰+a : " 
 		+ ym2+"/"+all2);
 		System.out.println(result2);
 		
-		System.out.println("C»ç¿øÀÇ ¿¬ºÀ/¿¬ºÀ+a : " 
+		System.out.println("Cì‚¬ì›ì˜ ì—°ë´‰/ì—°ë´‰+a : " 
 		+ ym3+"/"+all3);
 		System.out.println(result3);
 	}

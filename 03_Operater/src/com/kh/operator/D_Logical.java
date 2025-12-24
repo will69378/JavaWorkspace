@@ -4,24 +4,24 @@ import java.util.Scanner;
 
 public class D_Logical {
 	/*
-	 * ³í¸® ¿¬»êÀÚ
+	 * ë…¼ë¦¬ ì—°ì‚°ì
 	 * 
-	 * ³í¸® °ª µÎ°³¸¦ ºñ±³ÇÏ´Â ¿¬»êÀÚ
+	 * ë…¼ë¦¬ ê°’ ë‘ê°œë¥¼ ë¹„êµí•˜ëŠ” ì—°ì‚°ì
 	 * 
-	 * 1. AND && : a && b -> a ¿Í b ¸ğµÎ°¡ ÂüÀÏ ¶§¸¸ true, ³ª¸ÓÁö´Â false
+	 * 1. AND && : a && b -> a ì™€ b ëª¨ë‘ê°€ ì°¸ì¼ ë•Œë§Œ true, ë‚˜ë¨¸ì§€ëŠ” false
 	 * 
-	 * 2. OR || : a || b -> a ¿Í b µÑ Áß ÇÏ³ª¶óµµ ÂüÀÌ°Å³ª µÑ´Ù ÂüÀÌ¸é true, ³ª¸ÓÁö´Â false
+	 * 2. OR || : a || b -> a ì™€ b ë‘˜ ì¤‘ í•˜ë‚˜ë¼ë„ ì°¸ì´ê±°ë‚˜ ë‘˜ë‹¤ ì°¸ì´ë©´ true, ë‚˜ë¨¸ì§€ëŠ” false
 	 */
 
 	Scanner sc = new Scanner(System.in);
 
 	public void method1() {
 		
-		System.out.print("¼ıÀÚ¸¦ ÇÏ³ª ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.print("ìˆ«ìë¥¼ í•˜ë‚˜ ì…ë ¥í•˜ì„¸ìš”.");
 		
 		int num = sc.nextInt();
  		
-		// numÀÇ °ªÀÌ 0º¸´Ù Å©¸é¼­ Â¦¼öÀÏ ¶§
+		// numì˜ ê°’ì´ 0ë³´ë‹¤ í¬ë©´ì„œ ì§ìˆ˜ì¼ ë•Œ
 		
 		boolean result = (num > 0) && (num % 2 == 0) ;
 		
@@ -30,8 +30,8 @@ public class D_Logical {
 	
 	public void method2() {
 		
-		//ÀÔ·ÂÇÑ °ªÀÌ 1ÀÌ»ó 100ÀÌÇÏÀÇ ¼ıÀÚÀÎÁö È®ÀÎ
-		System.out.print("Á¤¼ö : ");
+		//ì…ë ¥í•œ ê°’ì´ 1ì´ìƒ 100ì´í•˜ì˜ ìˆ«ìì¸ì§€ í™•ì¸
+		System.out.print("ì •ìˆ˜ : ");
 		
 		int x = sc.nextInt();
 		
@@ -39,9 +39,9 @@ public class D_Logical {
 	}
 	
 	public void method3() {
-		//»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀÌ y°Å³ª YÀÎ °æ¿ì Âü, ¾Æ´Ï¸é °ÅÁşÀ» ¹İÈ¯ÇØ¶ó
+		//ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°’ì´ yê±°ë‚˜ Yì¸ ê²½ìš° ì°¸, ì•„ë‹ˆë©´ ê±°ì§“ì„ ë°˜í™˜í•´ë¼
 		
-		System.out.println("°è¼Ó ÁøÇàÇÏ¸é y¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.println("ê³„ì† ì§„í–‰í•˜ë©´ yë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		char ch = sc.next().charAt(0);
 		
 		boolean result = (ch == 'y') || (ch == 'Y');
@@ -51,8 +51,8 @@ public class D_Logical {
 		
 		int num1 = 10;
 		
-		//Áß¿ä 
-		//AND ¿¬»êÀÚÀÇ °æ¿ì ¾ÕÂÊ Á¶°ÇÀÌ false¸é µÚ¿¡ Á¶°ÇÀº ½ÇÇà ÀÚÃ¼¸¦ ÇÏÁö¾Ê´Â´Ù.
+		//ì¤‘ìš” 
+		//AND ì—°ì‚°ìì˜ ê²½ìš° ì•ìª½ ì¡°ê±´ì´ falseë©´ ë’¤ì— ì¡°ê±´ì€ ì‹¤í–‰ ìì²´ë¥¼ í•˜ì§€ì•ŠëŠ”ë‹¤.
 		
 		boolean result1 = (num1 < 5) && (num1++ > 0); //false
 		
@@ -61,8 +61,8 @@ public class D_Logical {
 		
 		int num2 = 10;
 		
-		//Áß¿ä
-		//OR ¿¬»êÀÚ ¶ÇÇÑ ºñ½ÁÇÏ°Ô ¾ÕÂÊ Á¶°Ç¿¡¼­ ÀÌ¹Ì true°¡ ³ª¿Â´Ù¸é µÚÂÊ Á¶°Ç ½ÇÇà ¾ÈÇÔ
+		//ì¤‘ìš”
+		//OR ì—°ì‚°ì ë˜í•œ ë¹„ìŠ·í•˜ê²Œ ì•ìª½ ì¡°ê±´ì—ì„œ ì´ë¯¸ trueê°€ ë‚˜ì˜¨ë‹¤ë©´ ë’¤ìª½ ì¡°ê±´ ì‹¤í–‰ ì•ˆí•¨
 		boolean result2 = (num2 < 20) || (++num2 > 0); //true
 		System.out.println(num2); //10
 		

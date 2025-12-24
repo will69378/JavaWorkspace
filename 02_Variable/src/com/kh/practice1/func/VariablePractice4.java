@@ -6,11 +6,11 @@ public class VariablePractice4 {
 	Scanner sc = new Scanner(System.in);
 	
 	public void practice4() {
-		System.out.print("¹®ÀÚ¿­À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ë¬¸ìì—´ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 		String name = sc.next();
 		
-		System.out.println("Ã¹¹øÂ° ¹®ÀÚ : "+ name.charAt(0));
-		System.out.println("µÎ¹øÂ° ¹®ÀÚ : "+ name.charAt(1));
-		System.out.println("¼¼¹øÂ° ¹®ÀÚ : "+ name.charAt(2));
+		System.out.println("ì²«ë²ˆì§¸ ë¬¸ì : "+ name.charAt(0));
+		System.out.println("ë‘ë²ˆì§¸ ë¬¸ì : "+ name.charAt(1));
+		System.out.println("ì„¸ë²ˆì§¸ ë¬¸ì : "+ name.charAt(2));
 	}
 }

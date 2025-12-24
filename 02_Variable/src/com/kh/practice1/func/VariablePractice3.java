@@ -8,17 +8,17 @@ public class VariablePractice3 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("∞°∑Œ : ");
+		System.out.print("Í∞ÄÎ°ú : ");
 		double x = sc.nextDouble();
 		
-		System.out.print("ºº∑Œ : ");
+		System.out.print("ÏÑ∏Î°ú : ");
 		double y = sc.nextDouble();
 		
 		double z = x*y;
 		double q = (x+y)*2;
 		
-		System.out.println("∏È¿˚ : " + z);
-		System.out.println("µ—∑π : " + q);
+		System.out.println("Î©¥Ï†Å : " + z);
+		System.out.println("ÎëòÎ†à : " + q);
 		
 	}
 }

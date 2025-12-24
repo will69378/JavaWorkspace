@@ -4,52 +4,52 @@ import java.util.Random;
 
 public class A_For {
 	/*
-	  <¹Ýº¹¹®>
+	  <ë°˜ë³µë¬¸>
 	  
-	  ½ÇÇàÇÒ ÄÚµå¸¦ ¹Ýº¹ÀûÀ¸·Î ¼öÇà½ÃÅ³ ¼ö ÀÖµµ·Ï µµ¿ÍÁÖ´Â Á¦¾î¹®
-	  Å©°Ô for¹®°ú while¹®À¸·Î ³ª´¸
+	  ì‹¤í–‰í•  ì½”ë“œë¥¼ ë°˜ë³µì ìœ¼ë¡œ ìˆ˜í–‰ì‹œí‚¬ ìˆ˜ ìžˆë„ë¡ ë„ì™€ì£¼ëŠ” ì œì–´ë¬¸
+	  í¬ê²Œ forë¬¸ê³¼ whileë¬¸ìœ¼ë¡œ ë‚˜ë‰¨
 	  
-	  [Ç¥Çö¹ý]
-	 for(ÃÊ±â½Ä; Á¶°Ç½Ä; Áõ°¨½Ä) {
-	 	¹Ýº¹ÀûÀ¸·Î ¼öÇàÇÒ ÄÚµå
+	  [í‘œí˜„ë²•]
+	 for(ì´ˆê¸°ì‹; ì¡°ê±´ì‹; ì¦ê°ì‹) {
+	 	ë°˜ë³µì ìœ¼ë¡œ ìˆ˜í–‰í•  ì½”ë“œ
 	 }
 	 
-	 - ÃÊ±â½Ä : ¹Ýº¹¹®ÀÌ ½ÃÀÛµÉ ¶§ ÃÊ±â¿¡ ÇÑ¹ø¸¸ ½ÇÇàµÇ´Â ±¸¹®
-	 	(¹Ýº¹¹®¿¡¼­ »ç¿ëÇÒ º¯¼ö¸¦ ¼±¾ð ¹× ÃÊ±âÈ­)
+	 - ì´ˆê¸°ì‹ : ë°˜ë³µë¬¸ì´ ì‹œìž‘ë  ë•Œ ì´ˆê¸°ì— í•œë²ˆë§Œ ì‹¤í–‰ë˜ëŠ” êµ¬ë¬¸
+	 	(ë°˜ë³µë¬¸ì—ì„œ ì‚¬ìš©í•  ë³€ìˆ˜ë¥¼ ì„ ì–¸ ë° ì´ˆê¸°í™”)
 	 
 	 ex) int i = 0;
 	 
-	 - Á¶°Ç½Ä : ¹Ýº¹¹®ÀÌ ¼öÇàµÉ Á¶°ÇÀ» ÀÛ¼ºÇÏ´Â ±¸¹®
-	 	Á¶°Ç½ÄÀÌ trueÀÏ °æ¿ì ¹Ýº¹¹®ÀÌ ¼öÇàµÊ
-	 	Á¶±ä½ÄÀÌ falseÀÎ °æ¿ì ¹Ýº¹¹® Á¾·á
-	 	(º¸Åë ÃÊ±â½Ä¿¡¼­ Á¦½ÃµÈ º¯¼ö¸¦ »ç¿ëÇÏ¿© Á¶°Ç½ÄÀ» ÀÛ¼º)
+	 - ì¡°ê±´ì‹ : ë°˜ë³µë¬¸ì´ ìˆ˜í–‰ë  ì¡°ê±´ì„ ìž‘ì„±í•˜ëŠ” êµ¬ë¬¸
+	 	ì¡°ê±´ì‹ì´ trueì¼ ê²½ìš° ë°˜ë³µë¬¸ì´ ìˆ˜í–‰ë¨
+	 	ì¡°ê¸´ì‹ì´ falseì¸ ê²½ìš° ë°˜ë³µë¬¸ ì¢…ë£Œ
+	 	(ë³´í†µ ì´ˆê¸°ì‹ì—ì„œ ì œì‹œëœ ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ ì¡°ê±´ì‹ì„ ìž‘ì„±)
 	 
 	 ex) i < 10;
 	 
-	 - Áõ°¨½Ä : ¹Ýº¹¹®À» Á¦¾îÇÏ´Â º¯¼ö°ªÀ» Áõ°¨½ÃÅ°´Â ±¸¹®
-	 	(º¸Åë ÃÊ±â½Ä¿¡¼­ Á¦½ÃµÈ º¯¼ö¸¦ Áõ°¨ÇÔ)
+	 - ì¦ê°ì‹ : ë°˜ë³µë¬¸ì„ ì œì–´í•˜ëŠ” ë³€ìˆ˜ê°’ì„ ì¦ê°ì‹œí‚¤ëŠ” êµ¬ë¬¸
+	 	(ë³´í†µ ì´ˆê¸°ì‹ì—ì„œ ì œì‹œëœ ë³€ìˆ˜ë¥¼ ì¦ê°í•¨)
 	 
 	 ex) i++, i--, i+=2 etc)
 	 
 	 
-	 for¹® ½ÇÇà Èå¸§
+	 forë¬¸ ì‹¤í–‰ íë¦„
 	 
-	 1. ÃÊ±â½Ä ½ÇÇà
-	 2. Á¶°Ç½Ä ½ÇÇà
-	 3-1. Á¶°Ç½Ä °á°ú°¡ ÂüÀÌ¶ó¸é for¹® ³»ºÎ ÄÚµå ½ÇÇà
-	 3-2. Á¶°Ç½Ä °á°ú°¡ °ÅÁþÀÌ¶ó¸é for¹® Á¾·á
-	 4. for¹® ³»ºÎ ÄÚµå ½ÇÇà ÈÄ Áõ°¨½Ä ½ÇÇà 
-	 5. Á¶°Ç½Ä ´Ù½Ã ½ÇÇà ÈÄ Áõ°¨½Ä ½ÇÇàÀÇ ¹Ýº¹
+	 1. ì´ˆê¸°ì‹ ì‹¤í–‰
+	 2. ì¡°ê±´ì‹ ì‹¤í–‰
+	 3-1. ì¡°ê±´ì‹ ê²°ê³¼ê°€ ì°¸ì´ë¼ë©´ forë¬¸ ë‚´ë¶€ ì½”ë“œ ì‹¤í–‰
+	 3-2. ì¡°ê±´ì‹ ê²°ê³¼ê°€ ê±°ì§“ì´ë¼ë©´ forë¬¸ ì¢…ë£Œ
+	 4. forë¬¸ ë‚´ë¶€ ì½”ë“œ ì‹¤í–‰ í›„ ì¦ê°ì‹ ì‹¤í–‰ 
+	 5. ì¡°ê±´ì‹ ë‹¤ì‹œ ì‹¤í–‰ í›„ ì¦ê°ì‹ ì‹¤í–‰ì˜ ë°˜ë³µ
 	 
 	 */
 
 	public void method1() {
 		for (int i = 0; i < 5; i++) {
-			System.out.println("¾È³ç");
+			System.out.println("ì•ˆë…•");
 		}
 		
 		for (int i = 0; i< 10; i += 2) {
-			System.out.println("¾È³ç");
+			System.out.println("ì•ˆë…•");
 		}
 	}
 	
@@ -78,31 +78,31 @@ public class A_For {
 		
 		/*
 		
-		ÀÚ¹Ù ±âº» ±â´É Áß Math Å¬·¡½ºÀÇ random()À» È£ÃâÇÏ¸é 
-		¸Å¹ø ´Ù¸¥ ½Ç¼öÇüÀÇ ·£´ý °ªÀ» ¾òÀ½
+		ìžë°” ê¸°ë³¸ ê¸°ëŠ¥ ì¤‘ Math í´ëž˜ìŠ¤ì˜ random()ì„ í˜¸ì¶œí•˜ë©´ 
+		ë§¤ë²ˆ ë‹¤ë¥¸ ì‹¤ìˆ˜í˜•ì˜ ëžœë¤ ê°’ì„ ì–»ìŒ
 		
-		0.0 <= ·£´ý°ª <=1.0
+		0.0 <= ëžœë¤ê°’ <=1.0
 		
-		1 ~ 10ÀÇ ·£´ý°ªÀ» ¾ò°í ½ÍÀ¸¸é
+		1 ~ 10ì˜ ëžœë¤ê°’ì„ ì–»ê³  ì‹¶ìœ¼ë©´
 		
-		1. 10À» °öÇÏ±â
-		0.0 <= ·£´ý°ª < 10.0
+		1. 10ì„ ê³±í•˜ê¸°
+		0.0 <= ëžœë¤ê°’ < 10.0
 		
-		2. 1 ´õÇÏ±â
-		1.0 <= ·£´ý°ª < 11.0
+		2. 1 ë”í•˜ê¸°
+		1.0 <= ëžœë¤ê°’ < 11.0
 		
-		3. ¼Ò¼öÁ¡ ¹ö¸®±â
-		1 <= ·£´ý°ª < 11
+		3. ì†Œìˆ˜ì  ë²„ë¦¬ê¸°
+		1 <= ëžœë¤ê°’ < 11
 		
-		ÄÚµå = > ·£´ý°ª * 10 + 1
-		10 : Ãâ·ÂÇÏ°íÀÚ ÇÏ´Â °¹¼ö
-		1 : ½ÃÀÛ¼ýÀÚ
-		Math.random() * Ãâ·ÂÇÒ °¹¼ö + ½ÃÀÛ¼ö
+		ì½”ë“œ = > ëžœë¤ê°’ * 10 + 1
+		10 : ì¶œë ¥í•˜ê³ ìž í•˜ëŠ” ê°¯ìˆ˜
+		1 : ì‹œìž‘ìˆ«ìž
+		Math.random() * ì¶œë ¥í•  ê°¯ìˆ˜ + ì‹œìž‘ìˆ˜
 		
 		*/
 		int random = (int)(Math.random() * 10 + 1);
 		
-		System.out.println("·£´ý °ª : "+random);
+		System.out.println("ëžœë¤ ê°’ : "+random);
 		
 		int sum = 0;
 		for(int i = 1; i<=random; i++) {
@@ -112,7 +112,7 @@ public class A_For {
 		System.out.println("sum : "+sum);
 	}
 	public void method6() {
-		String str = "hello"; //¹®ÀÚ¿­ÀÇ ±æÀÌ : 5
+		String str = "hello"; //ë¬¸ìžì—´ì˜ ê¸¸ì´ : 5
 		
 		for(int i = 0; i < str.length(); i++) {
 			System.out.print(str.charAt(i));
@@ -121,10 +121,37 @@ public class A_For {
 	
 	public void method7() {
 		for (int i = 2; i < 10; i++) {
+			System.out.println();
+			System.out.println("êµ¬êµ¬ë‹¨ "+i+"ë‹¨");
+			System.out.println();
 			for(int i2 = 2; i2<10; i2++) {
 				int result = i * i2;
 				System.out.println(i + " X "+ i2 +" = " + result);	
 			}
 		}
 	}
+	
+	public void method8() {
+		for (int i = 0; i < 4; i++) {
+			if(i != 0) {
+				System.out.println();
+			}
+			for (int j = 0; j < 5; j++) {
+				System.out.print("*");
+			}
+		}
+	}
+	
+	public void method9() {
+		
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 4; j++) {
+				if(j == i) System.out.print(j + 1);
+				else System.out.print("*");
+				
+			}
+			System.out.println();
+		}
+	}
+
 }

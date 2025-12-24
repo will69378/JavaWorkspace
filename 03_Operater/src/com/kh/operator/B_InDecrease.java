@@ -3,42 +3,42 @@ package com.kh.operator;
 public class B_InDecrease {
 
 	/*
-	 * Áõ°¨¿¬»êÀÚ(´ÜÇ×¿¬»êÀÚ) : ++, --
+	 * ì¦ê°ì—°ì‚°ì(ë‹¨í•­ì—°ì‚°ì) : ++, --
 	 * 
-	 * ++ : º¯¼ö¿¡ ÀÖ´Â °ªÀ» 1 Áõ°¡
+	 * ++ : ë³€ìˆ˜ì— ìˆëŠ” ê°’ì„ 1 ì¦ê°€
 	 * 
-	 * -- : º¯¼ö¿¡ ÀÖ´Â °ªÀ» 1 °¨¼Ò
+	 * -- : ë³€ìˆ˜ì— ìˆëŠ” ê°’ì„ 1 ê°ì†Œ
 	 * 
-	 * ++º¯¼ö °°Àº ÇüÅÂ¸¦ ÀüÀ§¿¬»êÀÚ : ¼±Áõ°¨ ÈÄÃ³¸® º¯¼ö++ °°Àº ÇüÅÂ¸¦ ÈÄÀ§¿¬»êÀÚ : ¼±Ã³¸® ÈÄÁõ°¨
+	 * ++ë³€ìˆ˜ ê°™ì€ í˜•íƒœë¥¼ ì „ìœ„ì—°ì‚°ì : ì„ ì¦ê° í›„ì²˜ë¦¬ ë³€ìˆ˜++ ê°™ì€ í˜•íƒœë¥¼ í›„ìœ„ì—°ì‚°ì : ì„ ì²˜ë¦¬ í›„ì¦ê°
 	 */
 
 	public void method1() {
 		int num = 10;
-		System.out.println("ÀüÀ§¿¬»êÀÚ Àû¿ë Àü num : " + num); // °á°ú : 10
-		System.out.println("1È¸ ¼öÇà : " + ++num); // °á°ú : 11
-		System.out.println("2È¸ ¼öÇà : " + ++num); // °á°ú : 12
-		System.out.println("3È¸ ¼öÇà : " + ++num); // °á°ú : 13
+		System.out.println("ì „ìœ„ì—°ì‚°ì ì ìš© ì „ num : " + num); // ê²°ê³¼ : 10
+		System.out.println("1íšŒ ìˆ˜í–‰ : " + ++num); // ê²°ê³¼ : 11
+		System.out.println("2íšŒ ìˆ˜í–‰ : " + ++num); // ê²°ê³¼ : 12
+		System.out.println("3íšŒ ìˆ˜í–‰ : " + ++num); // ê²°ê³¼ : 13
 
-		System.out.println("ÃÖÁ¾ num : " + num); // °á°ú : 13
+		System.out.println("ìµœì¢… num : " + num); // ê²°ê³¼ : 13
 
 		int num2 = 10;
-		System.out.println("ÈÄÀ§¿¬»ê Àü num2 : " + num2); // °á°ú : 10
-		System.out.println("1È¸ ¼öÇà : " + num2++); // °á°ú : 10 / ÀÌ ¹®Àå ½ÇÇà ÈÄ : 11
-		System.out.println("2È¸ ¼öÇà : " + num2++); // °á°ú : 11 / ½ÇÇà ÈÄ : 12
-		System.out.println("3È¸ ¼öÇà : " + num2++); // °á°ú : 12 / ½ÇÇà ÈÄ : 13
+		System.out.println("í›„ìœ„ì—°ì‚° ì „ num2 : " + num2); // ê²°ê³¼ : 10
+		System.out.println("1íšŒ ìˆ˜í–‰ : " + num2++); // ê²°ê³¼ : 10 / ì´ ë¬¸ì¥ ì‹¤í–‰ í›„ : 11
+		System.out.println("2íšŒ ìˆ˜í–‰ : " + num2++); // ê²°ê³¼ : 11 / ì‹¤í–‰ í›„ : 12
+		System.out.println("3íšŒ ìˆ˜í–‰ : " + num2++); // ê²°ê³¼ : 12 / ì‹¤í–‰ í›„ : 13
 
-		System.out.println("ÃÖÁ¾ num2 : " + num2); // °á°ú : 13
+		System.out.println("ìµœì¢… num2 : " + num2); // ê²°ê³¼ : 13
 	}
 
 	public void method2() {
 		int a = 10;
-		int b = ++a; // ¸Ş¸ğ¸® °ªÀ» Áõ°¡ ½ÃÄ×±â¿¡ µû·Î ÀúÀå ¾ÈÇØµµ Áõ°¡ À¯Áö
+		int b = ++a; // ë©”ëª¨ë¦¬ ê°’ì„ ì¦ê°€ ì‹œì¼°ê¸°ì— ë”°ë¡œ ì €ì¥ ì•ˆí•´ë„ ì¦ê°€ ìœ ì§€
 
 		System.out.println("a : " + a); // 11
 		System.out.println("b : " + b); // 11
 
 		int c = 10;
-		int d = c++; // ÀÏ´Ü d¿¡ 10À» ´ëÀÔ ÈÄ c Áõ°¡
+		int d = c++; // ì¼ë‹¨ dì— 10ì„ ëŒ€ì… í›„ c ì¦ê°€
 
 		System.out.println("c : " + c); // 11
 		System.out.println("d : " + d); // 10
@@ -56,7 +56,7 @@ public class B_InDecrease {
         int a = 10;
         int b =20;
         int c = 30;
-        //ÁÖ¼®À¸·Î ¾î¶»°Ô Ãâ·ÂµÉ°Å°°ÀºÁö »ı°¢ÇÏ±â
+        //ì£¼ì„ìœ¼ë¡œ ì–´ë–»ê²Œ ì¶œë ¥ë ê±°ê°™ì€ì§€ ìƒê°í•˜ê¸°
         System.out.println(a++); //10(11)
         System.out.println((++a) + (b++)); // 32 / a=12, b=20(21)
         System.out.println((a++)+(--b)+(--c)); //12(13) + 20 + 29 = 61
