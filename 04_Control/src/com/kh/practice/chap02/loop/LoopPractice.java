@@ -115,9 +115,6 @@ public class LoopPractice {
 
 	public void practice7() {
 		
-		
-		
-		
 		while(true) {
 			System.out.print("연산자 : ");
 			String str = sc.next();
@@ -134,9 +131,9 @@ public class LoopPractice {
 			int num2 = sc.nextInt();
 			
 			
-			if(str.equals("/") && num2 == 0) {
+			if(str.equals("/") && num2 == 0 || str.equals("%")) {
 				System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요");
-				break;
+				continue;
 			}
 			switch(str) {
 			case "+":
@@ -201,8 +198,8 @@ public class LoopPractice {
 		
 		for(int i = 2; i<num; i++) {
 						
-			if(num % i == 0) {
-				count += 1;
+			if(num % i == 0) { //1과 입력된 숫자 외에 약수가 있다면
+				count += 1;    //count에 +1
 			}
 			
 		}
