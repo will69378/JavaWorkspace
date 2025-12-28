@@ -197,31 +197,76 @@ public class ArrayPractice {
 		}
 	}
 	
-	public void practice11(){
-		
-		System.out.print("정수 : ");
-		int num = sc.nextInt();
-		
-		int[] arr = new int[num];
-		
-		
-		
-		for(int i = 1; i<arr.length; i++) {
-			
-			if(num<3 || num%2==0) {
-				System.out.println("다시 입력하세요.");
-				break;
-			}
-			
-			if((arr.length)/2<i) {
-				arr[i-1] = arr[i]-1;
-			}
-			else {
-				arr[i-1] = i;
-			}
-			System.out.print(arr[i] + " ");
-		}
-		
-	}
+    public void practice11(){
+        
+    int up = 0;
+    int down = 0;
+            
+        for(; ;) {
+            
+            System.out.print("정수 : ");
+            int num = sc.nextInt();
+            
+            int[] arr = new int[num];
+            
+            up = num/2;
+            
+            for(int i = 0; i<arr.length; i++) {
+                if(num<3 || num%2==0) {
+                    System.out.println("다시 입력하세요.");
+                    break;
+                }
+                
+                
+                if(up>i) {
+                    arr[i] = 1+i;
+                }
+                else {
+                    arr[i] = 1+up--;
+                }
+                System.out.print(arr[i]+ " ");
+            }
+            if(arr[num-1] == 1) {
+                break;
+            }
+        }
+    }
+    
+    public void practice12(){
+        
+        int lastnum = 0;
+        
+            System.out.print("배열의 크기를 입력하세요 : ");
+            int num = sc.nextInt();
+            
+            lastnum = num;
+            
+            String[] arr = new String[lastnum];
+            
+            
+            for(int i = 0; i<lastnum; i++) {
+                System.out.println();
+                System.out.print(i+1 +"번째 문자열 : ");
+                
+                String str = sc.next();
+                arr[i] = str;
+                
+                
+                if(i-1 == arr.length) {
+                    System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+                    String ans = sc.next();
+                    
+                    if(ans.equals("y") || ans.equals("Y")) {
+                        System.out.print("더 입력하고 싶은 개수 : ");
+                        int num2 = sc.nextInt();
+                        
+                        lastnum = lastnum+num2;
+                    }
+                }
+            }
+            System.out.println(Arrays.toString(arr));
+            
+        }
+
 	
 }
