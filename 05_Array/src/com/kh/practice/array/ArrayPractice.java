@@ -110,7 +110,7 @@ public class ArrayPractice {
 		int[] num = new int[ch.length];
 		int count = 0;
 		
-		System.out.print("문자열 : ");
+		System.out.print("문자 : ");
 		char chh = sc.next().charAt(0);
 		
 		boolean ft = false;
@@ -131,6 +131,7 @@ public class ArrayPractice {
 		System.out.println(chh+" 개수 : "+count);
 		
 	}
+
 	
 	public void practice8(){
 		System.out.print("주민등록번호(-포함) : ");
@@ -231,7 +232,7 @@ public class ArrayPractice {
             }
         }
     }
-    
+     
     public void practice12(){
         
         int lastnum = 0;
@@ -252,7 +253,7 @@ public class ArrayPractice {
                 arr[i] = str;
                 
                 
-                if(i-1 == arr.length) {
+                if(i+1 == arr.length) {
                     System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
                     String ans = sc.next();
                     
