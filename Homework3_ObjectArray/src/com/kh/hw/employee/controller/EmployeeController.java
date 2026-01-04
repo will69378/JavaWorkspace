@@ -9,22 +9,13 @@ public class EmployeeController {
 	
 	public void add(int empNo, String name, 
 			char gender, String phone) {
-		e.setEmpNo(empNo);
-		e.setGender(gender);
-		e.setName(name);
-		e.setPhone(phone);
+		e = new Employee(empNo, name, gender, phone);
 	}
 	
 	public void add(int empNo, String name, 
 			char gender, String phone, String dept,
 			int salary, double bonus) {
-		e.setBonus(bonus);
-		e.setDept(dept);
-		e.setEmpNo(empNo);
-		e.setGender(gender);
-		e.setName(name);
-		e.setPhone(phone);
-		e.setSalary(salary);
+		e = new Employee(empNo, name, gender, phone, dept, salary, bonus);
 	}
 	
 	
@@ -40,13 +31,7 @@ public class EmployeeController {
 
 	
 	public Employee remove() {
-		e.setBonus(0);
-		e.setDept(null);
-		e.setEmpNo(0);
-		e.setGender(' ');
-		e.setName(null);
-		e.setPhone(null);
-		e.setSalary(0);
+		e = new Employee(0, null, ' ', null, null, 0, 0.0);
 		return e;
 		
 	}

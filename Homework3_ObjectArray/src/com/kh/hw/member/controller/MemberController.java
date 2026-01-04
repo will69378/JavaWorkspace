@@ -9,13 +9,12 @@ public class MemberController {
 	
 	public int existMemberNum() {
 		int count = 0;
-		for (int i = 0; i < m.length; i++) {
-			if(!(m[i].getId() == null)) {
+		for(int i = 0; i<m.length; i++) {
+			if(m[i].getId() == null) {
 				count++;
 			}
 		}
-		
-		return count;
+		return m.length-count;
 	}
 	
 	public boolean checkId(String inputId) {

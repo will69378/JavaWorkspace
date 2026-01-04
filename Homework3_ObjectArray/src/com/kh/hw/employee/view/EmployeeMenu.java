@@ -58,7 +58,7 @@ public class EmployeeMenu {
 		
 		ec.add(empNo, name, gender, phone);
 		
-		System.out.println("추가 정보를 더 입력하시겠습니까?(y/n) :");
+		System.out.print("추가 정보를 더 입력하시겠습니까?(y/n) :");
 		char exin = sc.next().charAt(0);
 		
 		if(exin == 'y' || exin == 'Y') {
@@ -125,8 +125,7 @@ public class EmployeeMenu {
 			System.out.println("사원 데이터가 없습니다.");
 		}
 		else {
-			System.out.println("사원 정보 : "+
-		ec.inform());
+			System.out.println("사원 정보 : "+ ec.inform());
 		}
 	}
 	
