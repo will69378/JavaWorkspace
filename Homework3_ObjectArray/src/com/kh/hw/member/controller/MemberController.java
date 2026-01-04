@@ -10,7 +10,7 @@ public class MemberController {
 	public int existMemberNum() {
 		int count = 0;
 		for (int i = 0; i < m.length; i++) {
-			if(!(m[i].getId()==null)) {
+			if(!(m[i].getId() == null)) {
 				count++;
 			}
 		}
