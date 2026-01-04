@@ -53,6 +53,9 @@ public class MemberMenu {
 					System.out.println("잘못 입력하셨습니다"
 							+ "다시 입력해주세요");
 				}
+			}else { 
+				System.out.println("잘못 입력하셨습니다"
+						+ "다시 입력해주세요");
 			}
 		}
 	}
@@ -63,18 +66,20 @@ public class MemberMenu {
 			String id = sc.next();
 			
 			for(;;) {
-				int count = 0;
-				if(count>0) {
-					System.out.print("아이디 : ");
-					String idRe = sc.next();
-					id = idRe;
-				}
+				
+				
 				if(mc.checkId(id)==true) {
 					System.out.println("중복입니다"
 						+ "다시 입력해주세요");
+					System.out.print("아이디 : ");
+					id = sc.next();
 					continue;
 				}
-				break;
+				else {
+					
+					break;
+				}
+				
 			}
 		
 			System.out.print("이름 : ");
@@ -88,24 +93,21 @@ public class MemberMenu {
 		
 			System.out.print("성별 : ");
 			char gender = sc.next().charAt(0);
+			
 			for(;;) {
-				int count = 0;
-				if(count>0) {
-					System.out.print("성별 : ");
-					char genderRe = sc.next().charAt(0);
-					gender = genderRe;
-				}
 				if(!(gender == 'm' || gender == 'M'
 						|| gender == 'f' || gender == 'F')) {
 						System.out.println("다시 입력하세요");
-						count++;
+						System.out.print("성별 : ");
+						gender = sc.next().charAt(0);
 						continue;
-					}
-				break;
-				
+				}
+				else {
+					break;
+				}
 			}
 			
-			System.out.println("나이 : ");
+			System.out.print("나이 : ");
 			int age = sc.nextInt();
 			
 			mc.insertMember(id, name, pw,
@@ -114,7 +116,45 @@ public class MemberMenu {
 		
 	
 	public void searchMember() {
+		for(;;) {
+			System.out.println("최대 등록 가능한 회원 수는 "+mc.SIZE
+				+"명입니다.");
+			System.out.println("현재 등록 가능한 회원 수는"+
+				mc.existMemberNum()+"명입니다.");
 		
+			if(mc.existMemberNum()<10) {
+				System.out.println("1. 아이디로 검색하기");
+				System.out.println("2. 이름으로 검색하기");
+				System.out.println("3. 이메일로 검색하기");
+				System.out.println("9. 끝내기");
+			
+				System.out.print("메뉴 번호 : ");
+				int num = sc.nextInt();
+				
+				if(num == 1) {
+					searchId();
+				}
+				else if(num==2) {
+					searchName();
+				}
+				else if(num==3) {
+					searchEmail();
+				}
+				else if(num==9) {
+					System.out.println("프로그램을 종료합니다.");
+					break;
+				}
+				else { 
+					System.out.println("잘못 입력하셨습니다"
+							+ "다시 입력해주세요");
+				}
+				
+			}else { 
+				System.out.println("잘못 입력하셨습니다"
+						+ "다시 입력해주세요");
+			}
+		}
+				
 	}
 	
 	public void searchId() {
