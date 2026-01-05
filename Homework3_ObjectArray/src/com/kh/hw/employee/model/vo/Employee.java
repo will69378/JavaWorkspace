@@ -34,8 +34,8 @@ public class Employee {
 			this.bonus = bonus;
 		}
 		
-		
-		public String printEmployee() {
+		@Override
+		public String toString() {
 			return empNo+", "+name+", "+gender+", "+phone+", "+
 			dept+", "+salary+", "+bonus;
 		}

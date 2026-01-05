@@ -31,16 +31,16 @@ public class EmployeeController {
 
 	
 	public Employee remove() {
-		e = new Employee(0, null, ' ', null, null, 0, 0.0);
+		e = null;
 		return e;
 		
 	}
 	
 	public String inform() {
-		if(e.getEmpNo() == 0) {
+		if(e == null) {
 			return null;
 		}
-		return e.printEmployee();
+		return e.toString();
 	}
 }
 

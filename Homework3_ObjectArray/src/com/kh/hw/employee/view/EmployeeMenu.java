@@ -3,6 +3,7 @@ package com.kh.hw.employee.view;
 import java.util.Scanner;
 
 import com.kh.hw.employee.controller.EmployeeController;
+import com.kh.hw.employee.model.vo.Employee;
 
 public class EmployeeMenu {
 	private Scanner sc = new Scanner(System.in);
@@ -56,7 +57,7 @@ public class EmployeeMenu {
 		System.out.print("전화 번호 : ");
 		String phone = sc.next();
 		
-		ec.add(empNo, name, gender, phone);
+		
 		
 		System.out.print("추가 정보를 더 입력하시겠습니까?(y/n) :");
 		char exin = sc.next().charAt(0);
@@ -73,6 +74,8 @@ public class EmployeeMenu {
 			
 			ec.add(empNo, name, gender, phone, dept, salary, bonus);
 			
+		}else {
+			ec.add(empNo, name, gender, phone);
 		}
 	}
 	
@@ -116,16 +119,18 @@ public class EmployeeMenu {
 		char exin = sc.next().charAt(0);
 		
 		if(exin == 'y' || exin == 'Y') {
+			
+			Employee e = ec.remove();
 			System.out.println("데이터 삭제에 성공하였습니다.");
-			ec.remove();
 		}
 	}
 	public void printEmp() {
-		if(ec.remove().getEmpNo()==0) {
-			System.out.println("사원 데이터가 없습니다.");
+		String inform = ec.inform();
+		if(inform != null) {
+			System.out.println(inform);
 		}
 		else {
-			System.out.println("사원 정보 : "+ ec.inform());
+			System.out.println("데이터가 없습니다");
 		}
 	}
 	
