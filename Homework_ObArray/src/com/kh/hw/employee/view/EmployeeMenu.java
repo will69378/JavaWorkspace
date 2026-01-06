@@ -6,129 +6,120 @@ import com.kh.hw.employee.controller.EmployeeController;
 
 public class EmployeeMenu {
 	private Scanner sc = new Scanner(System.in);
-	
+
 	private EmployeeController ec = new EmployeeController();
-	
+
 	public EmployeeMenu() {
-		for(;;) {
+		for (;;) {
 			System.out.println("1. 사원 추가");
 			System.out.println("2. 사원 수정");
 			System.out.println("3. 사원 삭제");
 			System.out.println("4. 사원 출력");
 			System.out.println("9. 프로그램 종료");
-		
+
 			System.out.print("메뉴 번호를 누르세요 : ");
 			int num = sc.nextInt();
-			
-			if(num == 9) {
+
+			if (num == 9) {
 				System.out.println("프로그램을 종료합니다.");
 				break;
-			}
-			else if ( num == 1 ) {
+			} else if (num == 1) {
 				insertEmp();
-			}
-			else if ( num == 2 ) {
+			} else if (num == 2) {
 				updateEmp();
-			}
-			else if ( num == 3 ) {
+			} else if (num == 3) {
 				deleteEmp();
-			}
-			else if ( num == 4 ) {
+			} else if (num == 4) {
 				printEmp();
-			}
-			else {
+			} else {
 				System.out.println("잘못 입력하셨습니다.");
 			}
-	
+
 		}
 	}
-	
+
 	public void insertEmp() {
 		System.out.print("사원 번호 : ");
 		int empNo = sc.nextInt();
-		
+
 		System.out.print("사원 이름 : ");
 		String name = sc.next();
-		
+
 		System.out.print("사원 성별 : ");
 		char gender = sc.next().charAt(0);
-		
+
 		System.out.print("전화 번호 : ");
 		String phone = sc.next();
-		
+
 		ec.add(empNo, name, gender, phone);
-		
+
 		System.out.println("추가 정보를 더 입력하시겠습니까?(y/n) :");
 		char exin = sc.next().charAt(0);
-		
-		if(exin == 'y' || exin == 'Y') {
+
+		if (exin == 'y' || exin == 'Y') {
 			System.out.print("사원 부서 : ");
 			String dept = sc.next();
-			
+
 			System.out.print("사원 연봉 : ");
 			int salary = sc.nextInt();
-			
+
 			System.out.print("보너스 율 : ");
 			double bonus = sc.nextDouble();
-			
+
 			ec.add(empNo, name, gender, phone, dept, salary, bonus);
-			
+
 		}
 	}
-	
+
 	public void updateEmp() {
 		System.out.println("1. 전화번호");
 		System.out.println("2. 사원 연봉");
 		System.out.println("3. 보너스 율");
 		System.out.println("9. 돌아가기");
-		
+
 		System.out.print("메뉴 번호를 누르세요 : ");
 		int num = sc.nextInt();
-		
-		if(num == 1) {
+
+		if (num == 1) {
 			System.out.print("전화 번호 : ");
 			String phone = sc.next();
 			ec.modify(phone);
-			}
-		
-		else if(num == 2) {
+		}
+
+		else if (num == 2) {
 			System.out.print("사원 연봉 : ");
 			int salary = sc.nextInt();
 			ec.modify(salary);
-			}
-		
-		else if(num == 3) {
+		}
+
+		else if (num == 3) {
 			System.out.print("보너스 율 : ");
 			double bonus = sc.nextDouble();
 			ec.modify(bonus);
-			}
-		else if(num == 9) {
+		} else if (num == 9) {
 			System.out.println("메인 메뉴로 돌아갑니다");
-		}
-		else {
+		} else {
 			System.out.println("잘못 입력");
 		}
-		
+
 	}
 
 	public void deleteEmp() {
 		System.out.print("정말 삭제하시겠습니까? (y/n)");
 		char exin = sc.next().charAt(0);
-		
-		if(exin == 'y' || exin == 'Y') {
+
+		if (exin == 'y' || exin == 'Y') {
 			System.out.println("데이터 삭제에 성공하였습니다.");
 			ec.remove();
 		}
 	}
+
 	public void printEmp() {
-		if(ec.remove().getEmpNo()==0) {
+		if (ec.remove().getEmpNo() == 0) {
 			System.out.println("사원 데이터가 없습니다.");
-		}
-		else {
-			System.out.println("사원 정보 : "+
-		ec.inform());
+		} else {
+			System.out.println("사원 정보 : " + ec.inform());
 		}
 	}
-	
-	
+
 }
