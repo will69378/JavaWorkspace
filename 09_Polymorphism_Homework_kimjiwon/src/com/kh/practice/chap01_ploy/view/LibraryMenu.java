@@ -3,12 +3,28 @@ package com.kh.practice.chap01_ploy.view;
 import java.util.Scanner;
 
 import com.kh.practice.chap01_ploy.controller.LibraryController;
+import com.kh.practice.chap01_ploy.model.vo.Book;
+import com.kh.practice.chap01_ploy.model.vo.Member;
 
 public class LibraryMenu {
 	LibraryController lc = new LibraryController();
 	Scanner sc = new Scanner(System.in);
-
+	
+	
 	public void mainMenu() {
+		System.out.print("이름 : ");
+		String name = sc.next();
+		
+		System.out.print("나이 : ");
+		int age = sc.nextInt();
+		
+		System.out.print("성별 : ");
+		char gender = sc.next().charAt(0);
+		
+		Member m = new Member(name, age, gender, 0);
+		
+		lc.insertMember(m);
+		int menuN;
 		for (;;) {
 			System.out.println("==== 메뉴 ====");
 			System.out.println("1. 마이페이지");
@@ -18,15 +34,16 @@ public class LibraryMenu {
 			System.out.println("9. 프로그램 종료하기");
 
 			System.out.print("메뉴 번호 : ");
-			int menuN = sc.nextInt();
+			menuN = sc.nextInt();
 
 			if (menuN == 9) {
+				System.out.println("프로그램을 종료합니다");
 				break;
 			}
 
 			switch (menuN) {
 			case 1:
-				lc.myInfo();
+				System.out.println(lc.myInfo());
 				break;
 
 			case 2:
@@ -43,31 +60,36 @@ public class LibraryMenu {
 
 			default:
 				System.out.println("다시 입력하세요");
-				return;
+				break;
 			}
 		}
 	}
 
 	public void selectAll() {
 		for (int i = 0; i < lc.selectAll().length; i++) {
-			System.out.print(i+"번 도서 : "+lc.selectAll()[i]);
+			System.out.println(i+"번 도서 : "+lc.selectAll()[i]);
 		}
 	}
 
 	public void searchBook() {
 		System.out.print("검색할 제목 키워드 : ");
-		String keyword = sc.next();
-		System.out.println(lc.searchBook(keyword));;
+		sc.nextLine();
+		String keyword = sc.nextLine();
 		
+		for(Book b : lc.searchBook(keyword)) {
+			if(b!=null) {
+				System.out.println(b);
+			}
+		}
 	}
 
 	public void rentBook() {
 		selectAll();
-		System.out.print("대여할 도서 번호 선택");
-		int index = sc.nextInt();
+		System.out.print("대여할 도서 번호 선택 : ");
+		int rent = sc.nextInt();
 		
 		
-		switch (lc.rentBook(index)) {
+		switch (lc.rentBook(rent)) {
 		case 0:
 			System.out.println("대여 성공");
 			break;

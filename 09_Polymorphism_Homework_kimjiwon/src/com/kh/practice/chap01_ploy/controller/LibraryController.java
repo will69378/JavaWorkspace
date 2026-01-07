@@ -13,7 +13,7 @@ public class LibraryController {
 	}
 	
 	public void insertMember(Member mem) {
-		mem = this.mem;
+		this.mem = mem;
 	}
 	
 	public Member myInfo() {
@@ -26,11 +26,10 @@ public class LibraryController {
 	
 	public Book[] searchBook(String keyword) {
 		Book[] searchList = new Book[5];
-		int count = 0;
-		
+	
 		for (int i = 0; i < searchList.length; i++) {
 			if(bList[i].getTitle().contains(keyword)) {
-				count++;
+				searchList[i] = bList[i];
 			}
 		}return searchList;
 		
@@ -38,8 +37,17 @@ public class LibraryController {
 	
 	public int rentBook(int index) {
 		int result = 0;
+ 		
+		Book b = bList[index];
 		
-		if(.getAccessAge )	
+		if(b instanceof AniBook && mem.getAge() < ((AniBook )b ).getAccessAge()) {
+			result = 1;
+		}
+		
+		else if (b instanceof CookBook &&((CookBook )b ).isCoupon() == true){
+			mem.setCouponCount(mem.getCouponCount()+1);
+			result = 2;
+		}
 		
 		return result;
 	}
