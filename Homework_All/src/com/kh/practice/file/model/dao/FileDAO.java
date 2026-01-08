@@ -20,7 +20,7 @@ public class FileDAO {
 		String str = s;
 		try {
 			f.createNewFile();
-			f1.
+			
 		} catch (IOException e) {
 			
 			e.printStackTrace();
