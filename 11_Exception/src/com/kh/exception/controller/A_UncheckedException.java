@@ -1,5 +1,6 @@
 package com.kh.exception.controller;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class A_UncheckedException {
@@ -51,8 +52,53 @@ public class A_UncheckedException {
 		System.out.println("종료");
 	}
 	
+	public void method2() {
+		System.out.print("정수 입력 (0제외) : ");
+		
+		try {
+			int num = sc.nextInt();
+			System.out.println("나눗셈으로 연산 결과 : "+(10/num));
+		} 
+		catch (ArithmeticException e) {
+			System.out.println("산수 오류");
+		}
+		catch (InputMismatchException e) {
+			System.out.println("입력 값 오류");
+		}
+		
+		
+	}
+	public void method3() {
+		System.out.print("배열의 크기 : ");
+		int size = sc.nextInt();
+		
+		
+		
+		try {
+		int[] arr = new int[size];
+		System.out.println("100번째 인덱스의 값 : "+arr[100]);
+	
+		} 
+		catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("배열 크기가 음수");
+			e.printStackTrace();
+		}
+		catch( RuntimeException e ) {
+			System.out.println();
+		}
+		
+		/*
+		 RuntimeException 관련된 예외는
+		 조건문으로 해결이 가능해서 예외 자체가 발생이 안되게 개발 권장
+		 또는 예외처리 구문으로 해결 가능
+		 
+		 예측이 가능한 상황 => 조건문으로 
+		 예측이 불가능한 상황 => 예외 처리 구문으로 해결
+		 */
+		
+		
+	}
 }
-
 
 
 
