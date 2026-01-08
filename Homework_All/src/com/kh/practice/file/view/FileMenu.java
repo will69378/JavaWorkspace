@@ -9,7 +9,11 @@ public class FileMenu {
 	FileController fc = new FileController();
 
 	public void mainMenu() {
-		System.out.println("***** My Note *****\n" + "1. 노트 새로 만들기\n" + "2. 노트 열기\n" + "3. 노트 열어서 수정하기\n" + "9. 끝내기\n");
+		System.out.println("***** My Note *****\n" 
+				+ "1. 노트 새로 만들기\n" 
+				+ "2. 노트 열기\n"
+				+ "3. 노트 열어서 수정하기\n" 
+				+ "9. 끝내기\n");
 
 		for (;;) {
 			System.out.print("메뉴 번호 : ");
@@ -20,20 +24,23 @@ public class FileMenu {
 				break;
 			}
 
-			switch (menuN) {
-			case 1:
+			else if (menuN == 1) {
 				fileSave();
 				break;
-			case 2:
+				
+			}
+			else if (menuN == 2) {
 				fileOpen();
 				break;
-			case 3:
+			}
+			
+			else if (menuN == 3) {
 				fileEdit();
 				break;
-
-			default:
+			}
+			
+			else {
 				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
-				break;
 			}
 
 		}
@@ -46,8 +53,9 @@ public class FileMenu {
 
 		for (;;) {
 			System.out.println("ex끝it을 입력할때까지 진행됩니다");
-			System.out.println("파일에 저장할 내용을 입력하세요 : ");
+			System.out.println("파일에 저장할 내용을 입력하세요");
 			System.out.print("내용 : ");
+			
 			String fs = sc.nextLine();
 
 			if (fs.equals("ex끝it")) {

@@ -23,13 +23,10 @@ public class FileController {
 	}
 	
 	public StringBuilder fileOpen(String file) {
-		StringBuilder sb = new StringBuilder();
-		
-		sb = fd.fileOpen(file);
-		return sb;
+		return fd.fileOpen(file);
 	}
 	
 	public void fileEdit(String file, StringBuilder sb) {
-		
+		fd.fileEdit(file, sb.toString());
 	}
 }
