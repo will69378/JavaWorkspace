@@ -17,7 +17,9 @@ public class FileMenu {
 
 		for (;;) {
 			System.out.print("메뉴 번호 : ");
+
 			int menuN = sc.nextInt();
+			
 
 			if (menuN == 9) {
 				System.out.println("프로그램을 종료합니다");
@@ -55,11 +57,12 @@ public class FileMenu {
 			System.out.println("ex끝it을 입력할때까지 진행됩니다");
 			System.out.println("파일에 저장할 내용을 입력하세요");
 			System.out.print("내용 : ");
-			
+			sc.nextLine();
 			String fs = sc.nextLine();
-
+			
 			if (fs.equals("ex끝it")) {
 				System.out.print("저장할 파일 명을 입력해주세요 : ");
+				
 				String fn = sc.nextLine();
 
 				for (;;) {
@@ -73,20 +76,23 @@ public class FileMenu {
 						}
 					} else {
 						fc.fileSave(fn, sb);
+						System.out.println("저장완료");
 					}
 				}
-
+				
 				break;
 			}
 
 			sb.append(fs);
-
+			
 		}
-
+		System.out.println("저장완료");
+		mainMenu();
 	}
 
 	public void fileOpen() {
 		System.out.print("열 파일 명 : ");
+		sc.nextLine();
 		String opf = sc.nextLine();
 
 		if (fc.checkName(opf) == true) {
@@ -99,6 +105,7 @@ public class FileMenu {
 
 	public void fileEdit() {
 		System.out.print("수정할 파일 명 : ");
+		sc.nextLine();
 		String edf = sc.nextLine();
 
 		if (fc.checkName(edf) == true) {
@@ -106,6 +113,7 @@ public class FileMenu {
 				System.out.println("ex끝it을 입력할때까지 진행됩니다");
 				System.out.println("파일에 저장할 내용을 입력하세요");
 				System.out.print("내용 : ");
+				sc.nextLine();
 				String fs = sc.nextLine();
 
 				if (fs.equals("ex끝it")) {
