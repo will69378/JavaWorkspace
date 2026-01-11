@@ -74,9 +74,10 @@ public class BookMenu {
 		Book b = new Book(title, author, price, c, p);
 		
 		for (int i = 0; i < bArr.length; i++) {
-			if(bArr[i] == null) {
+			
+			if(bArr[i] != null) {
 				bArr[i] = b;
-				bc.fileSave(bArr[i]);
+				bc.fileSave(bArr);
 				break;
 			}
 		}
