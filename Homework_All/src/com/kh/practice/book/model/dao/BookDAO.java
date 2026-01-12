@@ -35,20 +35,22 @@ public class BookDAO {
 			ObjectInputStream ois = new ObjectInputStream(new FileInputStream("book.txt"));
 			for (int i = 0; i < bArr.length; i++) {
 				try {
-					bArr[i] = ois.readObject();
+					bArr[i] = (Book)ois.readObject();
 				} catch (ClassNotFoundException e) {
 
 					e.printStackTrace();
+				}
+				catch (EOFException e) {
+					
 				}
 			}
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (EOFException e) {
-			
 		}
 		catch (IOException e) {
 			e.printStackTrace();
 		}
+		return bArr;
 	}
 }

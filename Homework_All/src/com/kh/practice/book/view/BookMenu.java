@@ -12,11 +12,11 @@ public class BookMenu {
 	
 	private BookController bc = new BookController();
 	
-	private Book[] bArr;
+	private Book[] bArr =null;
 		
 	public BookMenu() {
-		
-		
+		bc.makeFile();
+		bArr = bc.fileRead();
 	}
 	
 	public void mainMenu() {
@@ -63,7 +63,7 @@ public class BookMenu {
 		int year, month, day;
 		
 		year = Integer.parseInt(d[0]);
-		month = Integer.parseInt(d[1]);
+		month = Integer.parseInt(d[1])-1;
 		day = Integer.parseInt(d[2]);
 		
 		Calendar c = new GregorianCalendar(year, month, day);
@@ -76,14 +76,21 @@ public class BookMenu {
 		for (int i = 0; i < bArr.length; i++) {
 			if(bArr[i] == null) {
 				bArr[i] = b;
-				bc.fileSave(bArr[i]);
+				
 				break;
 			}
 		}
+		bc.fileSave(bArr);
 	}
 	
 	public void fileRead() {
-		System.out.println(bc.fileRead());
+		Book[] bArr = bc.fileRead();
+		
+		for(Book b : bArr) {
+			if(b!=null) {
+				System.out.println(b);
+			}
+		}
 	}
 	
 }
