@@ -74,9 +74,14 @@ public class BookMenu {
 		Book b = new Book(title, author, price, c, p);
 		
 		for (int i = 0; i < bArr.length; i++) {
-			if(bArr[i] == null) {
+			
+			if(bArr[i] != null) {
 				bArr[i] = b;
+<<<<<<< HEAD
 				
+=======
+				bc.fileSave(bArr);
+>>>>>>> branch 'main' of https://github.com/will69378/JavaWorkspace.git
 				break;
 			}
 		}

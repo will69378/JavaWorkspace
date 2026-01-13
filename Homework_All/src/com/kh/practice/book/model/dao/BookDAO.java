@@ -35,10 +35,16 @@ public class BookDAO {
 			ObjectInputStream ois = new ObjectInputStream(new FileInputStream("book.txt"));
 			for (int i = 0; i < bArr.length; i++) {
 				try {
+<<<<<<< HEAD
 					bArr[i] = (Book)ois.readObject();
+=======
+					bArr[i] = (Book) ois.readObject();
+>>>>>>> branch 'main' of https://github.com/will69378/JavaWorkspace.git
 				} catch (ClassNotFoundException e) {
 
 					e.printStackTrace();
+				} catch (EOFException e) {
+					
 				}
 				catch (EOFException e) {
 					
