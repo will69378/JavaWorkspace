@@ -1,5 +1,7 @@
 package com.kh.practice.list.library.model.vo;
 
+import java.util.Objects;
+
 public class Book {
 	private String title, author, category;
 	private int price;
@@ -53,16 +55,24 @@ public class Book {
 		this.price = price;
 	}
 	
+	@Override
 	public int hashCode() {
-		
+		return Objects.hash(author, category, price, title);
 	}
 	
-	public boolean equals() {
-		
-	}
-	
-	public int compareTo() {
-		
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		return Objects.equals(author, other.author) 
+				&& Objects.equals(category, other.category) 
+				&& price == other.price
+				&& Objects.equals(title, other.title);
 	}
 	
 	

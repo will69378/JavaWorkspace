@@ -110,7 +110,7 @@ public class BookMenu {
 	public void selectList() {
 		ArrayList<Book> bookList = bc.selectList();
 		
-		if(bookList == null) {
+		if(bookList.isEmpty()) {
 			System.out.println("존재하는 도서가 없습니다");
 		}
 		else {
@@ -123,10 +123,34 @@ public class BookMenu {
 	public void searchBook() {
 		System.out.print("검색할 도서명 : ");
 		String sBook = sc.nextLine();
+		
+		ArrayList<Book> searchList = bc.searchBook(sBook);
+		
+		if(searchList.isEmpty()) {
+			System.out.println("비어있습니다");
+		}
+		else {
+			for (int i = 0; i < searchList.size(); i++) {
+				System.out.println(searchList.get(i));
+			}
+		}
 	}
 	
 	public void deleteBook() {
+		System.out.print("삭제할 도서명 : ");
+		String dtitle = sc.nextLine();
 		
+		System.out.print("삭제할 저자명 : ");
+		String dauthor = sc.nextLine();
+		
+		Book remove = bc.deleteBook(dtitle, dauthor);
+		
+		if(!remove.getTitle().contains(dauthor)) {
+			System.out.println("성공적으로 삭제되었습니다.");
+		}
+		else {
+			System.out.println("삭제할 도서를 찾지 못했습니다.");
+		}
 	}
 	
 	public void ascBook() {
