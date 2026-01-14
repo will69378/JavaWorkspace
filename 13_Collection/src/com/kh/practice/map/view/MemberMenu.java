@@ -46,7 +46,32 @@ public class MemberMenu {
 	}
 
 	public void memberMenu() {
+		for (;;) {
+			System.out
+					.println("======== 회원 메뉴 ========\n" + "1. 비밀번호 바꾸기\n"
+			+ "2. 이름 바꾸기\n" + "3. 로그아웃\n");
+			System.out.print("메뉴 번호 선택 : ");
+			int menu = sc.nextInt();
+			sc.nextLine();
 
+			if (menu == 3) {
+				System.out.println("프로그램 종료");
+				break;
+			}
+			switch (menu) {
+			case 1:
+				changePassword();
+				break;
+				
+			case 2:
+				changeName();
+				break;
+				
+			default :
+				System.out.println("잘 못 입력. 다시 입력.");
+				break;
+			}
+		}
 	}
 
 	public void joinMembership() {
@@ -153,15 +178,12 @@ public class MemberMenu {
 		System.out.print("이름 : ");
 		String name = sc.nextLine();
 		
-		TreeMap<String, Member> sn = mc.sameName(name);
+		TreeMap<String, String>map = mc.sameName(name);
+		Set<Entry<String, String>> entrys = map.entrySet();
 		
-		
-		
-		Set<String> set = sn.keySet();
-		Set<Entry<String, Member>> entrySet = sn.entrySet();
-		for(Entry<String, Member> entry : entrySet) {
-			System.out.println("key : "+entry.getKey());
-			System.out.println("value : "+entry.getValue());
+		for(Entry<String, String> entry : entrys) {
+			System.out.println(entry.getValue()+"-"+entry.getKey());
+		}
 	}
-	}
+	
 }

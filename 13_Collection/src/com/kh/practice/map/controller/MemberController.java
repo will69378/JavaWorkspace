@@ -1,8 +1,8 @@
 package com.kh.practice.map.controller;
 
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.TreeMap;
 
 import com.kh.practice.map.model.vo.Member;
@@ -11,23 +11,19 @@ public class MemberController {
 	HashMap<String, Member> map = new HashMap<String, Member>();
 	
 	public boolean joinMembership(String id, Member m) {
-		if(id==null) {
+		if(!map.containsKey(id)) {
 			map.put(id, m);
 			return true;
 		}
 		else {
+
 			return false;
 		}
 	}
 	
 	public String logIn(String id, String password) {
-		if(id!=null) {
-			if(map.containsKey(password)) {
-				return String.valueOf(map.get(id));
-			}
-			else {
-				return null;
-			}
+		if(map.containsKey(id) && map.containsValue(password)) {
+			return String.valueOf(map.get(id).getName());
 		}
 		else {
 			return null;
@@ -49,11 +45,19 @@ public class MemberController {
 		map.get(id).setName(newName);
 	}
 	
-	public TreeMap<String, Member> sameName(String name) {
-		
-		if(map.containsKey(name)) {
+	public TreeMap<String, String> sameName(String name) {
+
+		Set<String> set = map.keySet();
+		TreeMap<String, String> sn = new TreeMap<>();
 			
+		if(map.containsKey(name)) {
+			for(String str : set) {
+				if(str.equals(name)) {
+					sn.put(str, name);
+				}
+			}
 		}
+		return sn;
 	}
 	
 	
