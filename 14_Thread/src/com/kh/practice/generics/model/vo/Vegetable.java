@@ -2,15 +2,15 @@ package com.kh.practice.generics.model.vo;
 
 import java.util.Objects;
 
-public class Vegetable {
+public class Vegetable extends Farm{
 	private String name;
 
 	public Vegetable() {
 		
 	}
 	
-	public Vegetable(String name) {
-		super();
+	public Vegetable(String kind, String name) {
+		super(kind);
 		this.name = name;
 	}
 

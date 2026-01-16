@@ -5,6 +5,8 @@ import java.util.Scanner;
 import com.kh.practice.generics.controller.FarmController;
 import com.kh.practice.generics.model.vo.Farm;
 import com.kh.practice.generics.model.vo.Fruit;
+import com.kh.practice.generics.model.vo.Nut;
+import com.kh.practice.generics.model.vo.Vegetable;
 
 public class FarmMenu {
 	Scanner sc = new Scanner(System.in);
@@ -120,43 +122,146 @@ public class FarmMenu {
 	}
 	
 	public void addNewKind() {
-		System.out.println("추가 농산물 선택\n"
-				+ "1. 과일\n"
-				+ "2. 채소\n"
-				+ "3. 견과\n");
-		System.out.print("번호 선택 : ");
-		int kind = sc.nextInt();
-		
-		String k = null;
-		
-		System.out.print("이름 : ");
-		String name = sc.next();
-		
-		System.out.print("수량 : ");
-		int hm = sc.nextInt();
-		
-		switch (kind) {
-		case 1:
-			k = "과일";
-			Farm ank = new Farm(k, name);
-			fc.addNewKind(ank, hm);
-			break;
-
-		default:
-			break;
+		while (true) {
+			Farm ank = null;
+			
+			System.out.println("추가 농산물 선택\n"
+					+ "1. 과일\n"
+					+ "2. 채소\n"
+					+ "3. 견과\n");
+			System.out.print("번호 선택 : ");
+			int kind = sc.nextInt();
+			
+			String k = null;
+			
+			System.out.print("이름 : ");
+			String name = sc.next();
+			
+			System.out.print("수량 : ");
+			int hm = sc.nextInt();
+			
+			switch (kind) {
+			case 1:
+				k = "과일";
+				ank = new Fruit(k, name);
+				break;
+			case 2:
+				k = "채소";
+				ank = new Vegetable(k, name);
+				break;
+			case 3:
+				k = "견과";
+				ank = new Nut(k, name);
+				break;
+			
+			default:
+				System.out.println("다시 입력하세요");
+				addNewKind();
+			}
+			if(fc.addNewKind(ank, hm)) {
+				System.out.println("추가되었습니다");
+			}
+			else {
+				System.out.println("추가에 실패.");
+			}
 		}
+		
+		
 	}
 	
 	public void removeKind() {
+		while (true) {
+			Farm ank = null;
+			
+			System.out.println("추가 농산물 선택\n"
+					+ "1. 과일\n"
+					+ "2. 채소\n"
+					+ "3. 견과\n");
+			System.out.print("번호 선택 : ");
+			int kind = sc.nextInt();
+			
+			String k = null;
+			
+			System.out.print("삭제할 농산물 이름 : ");
+			String name = sc.next();
+
+			switch (kind) {
+			case 1:
+				k = "과일";
+				ank = new Fruit(k, name);
+				break;
+			case 2:
+				k = "채소";
+				ank = new Vegetable(k, name);
+				break;
+			case 3:
+				k = "견과";
+				ank = new Nut(k, name);
+				break;
+			
+			default:
+				System.out.println("다시 입력하세요");
+				removeKind();
+			}
+			if(fc.removeKind(ank)) {
+				System.out.println("삭제 되었습니다");
+			}
+			else {
+				System.out.println("삭제에 실패.");
+			}
+		}
 		
 	}
 	
 	public void changeAmount() {
-		
+		while (true) {
+			Farm ank = null;
+			
+			System.out.println("추가 농산물 선택\n"
+					+ "1. 과일\n"
+					+ "2. 채소\n"
+					+ "3. 견과\n"
+					+ "9.");
+			System.out.print("번호 선택 : ");
+			int kind = sc.nextInt();
+			
+			String k = null;
+			
+			System.out.print("수정할 농산물 이름 : ");
+			String name = sc.next();
+			
+			System.out.print("수정할 수량 : ");
+			int hm = sc.nextInt();
+
+			switch (kind) {
+			case 1:
+				k = "과일";
+				ank = new Fruit(k, name);
+				break;
+			case 2:
+				k = "채소";
+				ank = new Vegetable(k, name);
+				break;
+			case 3:
+				k = "견과";
+				ank = new Nut(k, name);
+				break;
+			
+			default:
+				System.out.println("다시 입력하세요");
+				changeAmount();
+			}
+			if(fc.changeAmount(ank, hm)) {
+				System.out.println("수정 되었습니다");
+			}
+			else {
+				System.out.println("수정에 실패.");
+			}
+		}
 	}
 	
 	public void printFarm() {
-		
+		System.out.println(fc.printFarm());
 	}
 	
 	public void buyFarm() {
