@@ -28,7 +28,7 @@ public class OuterClass3 {
 		//local = 5;
 		
 		//지역변수는 지역 내부 클래스에서 사용되는 경우, final 예약어가 붙은 것처럼 취급함
-		// why? static 메모리에서 지역변수의 저장공간이 소멸한 후 참저를 유지하기 위해서
+		//왜냐하면 static 메모리에서 지역변수의 저장공간이 소멸한 후 참조를 유지하기 위해서
 		
 		class LocalInnerClass implements Runnable {
 			private int num = 10;
